@@ -278,10 +278,8 @@ class HomeScreen extends Component {
                   }}
                 />
               </View>
-              
-              <View style={styles.line} >
 
-              </View>
+              <View style={styles.line}></View>
 
               <View style={styles.Shortcut}>
                 <View>
@@ -316,53 +314,82 @@ class HomeScreen extends Component {
                 />
               </View>
 
-
-<View style={styles.category}>
-                <View style={styles.category1}>
+              <View style={styles.category}>
+                <View style={styles.categorytwo2}>
                   <View style={styles.frstline}>
                     {/* <Text style={styles.categoryname}>Services</Text> */}
                     <Image
-                        style={styles.suitcase}
-                        resizeMode={'contain'}
-                        source={require('/Users/ishitabhardwaj/Desktop/Assessment1/src/utils/753889.png')}
-                      />
+                      style={styles.suitcase}
+                      resizeMode={'contain'}
+                      source={require('/Users/ishitabhardwaj/Desktop/Assessment1/src/utils/753889.png')}
+                    />
                     <View style={styles.img}>
                       <Image
-                        style={styles.categimg}
+                        style={styles.categimgg}
                         resizeMode={'contain'}
                         source={require('/Users/ishitabhardwaj/Desktop/Assessment1/src/utils/758911.png')}
                       />
                     </View>
                   </View>
-                  <Text style={styles.categorydesc}>travel the world with airtel</Text>
-                  <Text style={styles.categoryname}>explore international roaming packs</Text>
-            
+                  <Text style={styles.categorydesc}>
+                    travel the world with airtel
+                  </Text>
+                  <Text style={styles.categoryname}>
+                    explore international roaming packs
+                  </Text>
                 </View>
-                <View style={styles.category2}>
-                  <ImageBackground
-                    style={styles.suitcase}
+
+                <View style={styles.categorytwo2}>
+                  <View style={styles.frstline}>
+                    {/* <Text style={styles.categoryname}>Services</Text> */}
+                    <Image
+                      style={styles.apps}
+                      resizeMode={'contain'}
+                      source={require('/Users/ishitabhardwaj/Desktop/Assessment1/src/utils/2489014.png')}
+                    />
+                    <View style={styles.img}>
+                      <Image
+                        style={styles.categimgg}
+                        resizeMode={'contain'}
+                        source={require('/Users/ishitabhardwaj/Desktop/Assessment1/src/utils/758911.png')}
+                      />
+                    </View>
+                  </View>
+                  <Text style={styles.categorydesc}>15 OTTs in 1 app</Text>
+                  <Text style={styles.categoryname}>
+                    get Xstream Premium plan at ₹149/month{' '}
+                  </Text>
+                </View>
+              </View>
+
+              <View style={styles.line}></View>
+
+              <View style={styles.offers}>
+                <ScrollView
+                  showsHorizontalScrollIndicator={false}
+                  horizontal={true}>
+                  <Image
+                    style={styles.offer}
                     resizeMode={'contain'}
-                    source={require('/Users/ishitabhardwaj/Desktop/Assessment1/src/utils/photo-1530293959042-0aac487c21e3.jpeg')}>
-                    <View style={styles.frstline}>
-                      <Text style={styles.categoryname}>Money</Text>
-                      <View style={styles.img}>
-                        <Image
-                          style={styles.categimg2}
-                          resizeMode={'contain'}
-                          source={require('/Users/ishitabhardwaj/Desktop/Assessment1/src/utils/240_F_305373948_BlxMt7W6Ijb1WMA9zQoJvFWidWDjaKXb.jpg')}
-                        />
-                      </View>
-                    </View>
-                    {/* //<Text style={styles.categoryname}>Money</Text> */}
-                    <Text style={styles.categorydesc}>₹••••••</Text>
-                    <Text style={styles.categoryname}>in your wallet</Text>
-                    <View style={styles.button2}>
-                      <TouchableOpacity style={styles.categstyle}>
-                        <Text style={styles.text}>SHOW BALANCE</Text>
-                      </TouchableOpacity>
-                    </View>
-                  </ImageBackground>
-                </View>
+                    source={require('/Users/ishitabhardwaj/Desktop/Assessment1/src/utils/airtel_recharge_1633951153214.jpg')}
+                  />
+                  <Image
+                    style={styles.offer}
+                    resizeMode={'contain'}
+                    source={require('/Users/ishitabhardwaj/Desktop/Assessment1/src/utils/airtel_recharge_1633951153214.jpg')}
+                  />
+
+                  <Image
+                    style={styles.offer}
+                    resizeMode={'contain'}
+                    source={require('/Users/ishitabhardwaj/Desktop/Assessment1/src/utils/airtel_recharge_1633951153214.jpg')}
+                  />
+                  <Image
+                    style={styles.offer}
+                    resizeMode={'contain'}
+                    source={require('/Users/ishitabhardwaj/Desktop/Assessment1/src/utils/airtel_recharge_1633951153214.jpg')}
+                  />
+                </ScrollView>
               </View>
             </View>
           </ScrollView>
@@ -406,6 +433,7 @@ const styles = StyleSheet.create({
   category: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
+    margin: 10,
   },
   category1: {
     width: 160,
@@ -457,6 +485,11 @@ const styles = StyleSheet.create({
   categimg: {
     width: 20,
     height: 20,
+  },
+  categimgg: {
+    width: 40,
+    height: 30,
+    marginTop: 30,
   },
   categimg2: {
     width: 30,
@@ -540,7 +573,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     margin: 8,
   },
-  
+
   flatView: {
     justifyContent: 'space-evenly',
     alignItems: 'center',
@@ -553,8 +586,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'pink',
   },
   flatImgIcons: {
-    height: 24,
-    width: 24,
+    height: 25,
+    width: 25,
+    margin: 10,
   },
   flatTxtView: {
     width: 80,
@@ -575,26 +609,46 @@ const styles = StyleSheet.create({
   },
   categorytwo2: {
     width: 160,
-    height: 200,
-    borderWidth: 2,
+    height: 220,
+    //borderWidth: 2,
     borderColor: 'black',
     borderRadius: 10,
     backgroundColor: 'white',
   },
-  suitcase:{
-    width: 50,
-    height: 100,
-
+  suitcase: {
+    width: 60,
+    height: 120,
   },
-  nexticon:{
+  apps: {
+    width: 60,
+    height: 120,
+    marginLeft: 10,
+  },
+  nexticon: {
     width: 10,
     height: 10,
-
   },
-  line:{
+  line: {
     borderColor: 'lightgrey',
     borderWidth: 3,
-  }
+  },
+  offers: { 
+    padding:10
+
+  },
+  offer: { 
+    width: 270,
+    height: 150,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: 'white',
+    //paddingBottom: 5,
+    resizeMode: 'stretch',
+    justifyContent: 'space-around',
+    margin: 5,
+    backgroundColor:'white'
+
+  },
 });
 
 // import React from 'react';
